@@ -7,14 +7,14 @@ use Throwable;
 
 use GuzzleHttp\Psr7\ServerRequest;
 
+use KnotLib\Kernel\Module\AbstractModule;
 use KnotLib\Kernel\Exception\ModuleInstallationException;
 use KnotLib\Kernel\Kernel\ApplicationInterface;
-use KnotLib\Kernel\Module\ComponentModule;
-use KnotLib\Kernel\Module\Components;
+use KnotLib\Kernel\Module\ComponentTypes;
 use KnotLib\Kernel\EventStream\Channels;
 use KnotLib\Kernel\EventStream\Events;
 
-class GuzzleHttpRequestModule extends ComponentModule
+class GuzzleHttpRequestModule extends AbstractModule
 {
     /**
      * Declare dependent on components
@@ -24,8 +24,8 @@ class GuzzleHttpRequestModule extends ComponentModule
     public static function requiredComponents() : array
     {
         return [
-            Components::EVENTSTREAM,
-            Components::DI,
+            ComponentTypes::EVENTSTREAM,
+            ComponentTypes::DI,
         ];
     }
 
@@ -36,7 +36,7 @@ class GuzzleHttpRequestModule extends ComponentModule
      */
     public static function declareComponentType() : string
     {
-        return Components::REQUEST;
+        return ComponentTypes::REQUEST;
     }
 
     /**
