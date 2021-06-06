@@ -1,18 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Module\GuzzleHttp;
+namespace knotphp\module\guzzlehttp;
 
 use Throwable;
 
 use GuzzleHttp\Psr7\ServerRequest;
 
-use KnotLib\Kernel\Module\ModuleInterface;
-use KnotLib\Kernel\Exception\ModuleInstallationException;
-use KnotLib\Kernel\Kernel\ApplicationInterface;
-use KnotLib\Kernel\Module\ComponentTypes;
-use KnotLib\Kernel\EventStream\Channels;
-use KnotLib\Kernel\EventStream\Events;
+use knotlib\kernel\module\ModuleInterface;
+use knotlib\kernel\exception\ModuleInstallationException;
+use knotlib\kernel\kernel\ApplicationInterface;
+use knotlib\kernel\module\ComponentTypes;
+use knotlib\kernel\eventstream\Channels;
+use knotlib\kernel\eventstream\Events;
 
 class GuzzleHttpRequestModule implements ModuleInterface
 {

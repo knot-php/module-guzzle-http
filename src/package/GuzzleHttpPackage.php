@@ -1,13 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Module\GuzzleHttp\Package;
+namespace knotphp\module\guzzlehttp\package;
 
-use KnotLib\Kernel\Module\PackageInterface;
-use KnotPhp\Module\KnotPipeline\KnotPipelineModule;
-use KnotPhp\Module\GuzzleHttp\GuzzleHttpRequestModule;
-use KnotPhp\Module\GuzzleHttp\GuzzleHttpResponseModule;
-use KnotPhp\Module\Stk2kEventStream\Stk2kEventStreamModule;
+use knotlib\kernel\module\PackageInterface;
+
+use knotphp\module\knotpipeline\KnotPipelineModule;
+use knotphp\module\guzzlehttp\GuzzleHttpRequestModule;
+use knotphp\module\guzzlehttp\GuzzleHttpResponseModule;
+use knotphp\module\stk2keventstream\Stk2kEventStreamModule;
 
 class GuzzleHttpPackage implements PackageInterface
 {
